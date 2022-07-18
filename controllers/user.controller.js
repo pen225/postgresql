@@ -2,8 +2,14 @@ const models = require('../db/models')
 const UserController = class {
     // Get all Users
     static getUsers = (req, res) => {
-    res.render('userList')
-}
+        models.User.findAll().then((result) => {
+            console.log('User list', result[0].dataValues);
+            res.render('userList', {data: result});
+        }).catch((err) => {
+            console.log('erreur de reucp Users data', err);
+        });
+        // res.render('userList')
+    }
 
     // Get User
     static getForm = (req, res) => {

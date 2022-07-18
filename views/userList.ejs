@@ -20,20 +20,16 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>Essoh jean-penuel</td>
-                    <td>penuel225@gmail.com</td>
-                    <td><a class="update" href="">Modifier</a></td>
-                    <td><a class="delete" href="">Supprimer</a></td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>Essoh jean-othniel</td>
-                    <td>oresh225@gmail.com</td>
-                    <td><a class="update" href="">Modifier</a></td>
-                    <td><a class="delete" href="">Supprimer</a></td>
-                </tr>
+                <% data.forEach(user => {%>
+                    <tr>
+                        <td><%= user.dataValues.id %></td>
+                        <td><%= user.dataValues.noms %></td>
+                        <td><%= user.dataValues.email %></td>
+                        <td><a class="update" href="">Modifier</a></td>
+                        <td><a class="delete" href="">Supprimer</a></td>
+                    </tr>
+                <% }) %>
+                
             </tbody>
         </table>
     </div>
