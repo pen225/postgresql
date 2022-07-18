@@ -8,6 +8,15 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users.router');
 
 var app = express();
+// Connect sequelize
+// const sequelize = require('./database')
+
+// try {
+//   sequelize.authenticate()
+//   console.log('Connection has been established successfully.');
+// } catch (error) {
+//   console.error('Unable to connect to the database:', error);
+// }
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
