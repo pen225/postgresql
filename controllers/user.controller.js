@@ -3,7 +3,6 @@ const UserController = class {
     // Get all Users
     static getUsers = (req, res) => {
         models.User.findAll().then((result) => {
-            console.log('User list', result[0].dataValues);
             res.render('userList', {data: result});
         }).catch((err) => {
             console.log('erreur de reucp Users data', err);
@@ -18,7 +17,6 @@ const UserController = class {
     
     // Get User
     static addUser = (req, res) => {
-        console.log('req body', req.body);
         const user = {
             noms: req.body.noms,
             email: req.body.email,
