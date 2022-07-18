@@ -1,0 +1,25 @@
+{
+  "development": {
+    "username": "tkioybmbhsioqf",
+    "password": "6eb8a9dd662b07c74ed9fda280a589826a113bac8315ac6372ce229922ab6fde",
+    "database": "da33gr3vdreelr",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "test": {
+    "username": "root",
+    "password": null,
+    "database": "database_test",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "production": {
+    "use_env_variable": "DATABSE_URL",
+    "dialect": "postgres",
+    "dialectOptions": {
+      "ssl": {
+          "require":true
+      }
+  }
+  }
+}
